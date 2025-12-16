@@ -1,248 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dennis Kipkoech - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dennis Kipkoech | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-header">
-      <h1>Dennis Kipkoech</h1>
-      <p>Computer Scientist | Developer | Tech Enthusiast</p>
-    </div>
-    
-    <ul class="nav-links">
-      <li><a href="#education" class="active"><i class="fas fa-graduation-cap"></i> Education</a></li>
-      <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
-      <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-|      <li><a href="#contributions"><i class="fas fa-hands-helping"></i> Contributions</a></li>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-    
-    <div class="social-links">
-      <a href="https://x.com/farahou110" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://github.com/Farahou110" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dennis-kipkoech-a04a71256" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </nav>
 
-  <main>
-    <section id="education">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <div class="content">
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>BSc. Computer Science</h3>
-            <p class="institution">Kabarak University</p>
-            <p class="date">2022 - Present</p>
-            <p class="description">Key Courses: OOP in C, JAVA, C++, Algorithms, Operating Systems, Data Structures, Web development, SQL (MYSQL, PLSQL, Oracle)</p>
-          </div>
-          <div class="timeline-item">
-            <h3>High School</h3>
-            <p class="institution">Cardinal Otunga High School</p>
-            <p class="date">2018 - 2021 | B+</p>
-          </div>
-          <div class="timeline-item">
-            <h3>Primary</h3>
-            <p class="institution">Mother Kevin Primary</p>
-            <p class="date">2010 - 2017 | 389/500</p>
-          </div>
-        </div>
+  <header>
+    <div class="navbar">
+      <a href="#" class="logo">
+        <i class="fas fa-terminal git-animated"></i> DK
+      </a>
+      
+      <div class="burger-icon" id="burger-icon">
+        <i class="fas fa-bars"></i>
       </div>
-    </section>
 
-    <section id="skills">
-      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <div class="skill-tags">
-            <ol>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">HTML/CSS</span>
-             <span class="skill-tag">Java</span>
-             </ol>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Technologies & Frameworks</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Django</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Bash</span>
-            <span class="skill-tag">Pandas</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Other Skills</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Data Structures</span>
-            <span class="skill-tag">Algorithms</span>
-            <span class="skill-tag">MS Office</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Networking</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <h2><i class="fas fa-certificate"></i> Certifications</h2>
-      <ul class="fancy-list">
-        <li><span>ALX - Foundational Skills for Professionals</span></li>
-        <li><span>JavaScript Hackathon (First Runners Up) - Egerton Google Developers Club</span></li>
-        <li><span>Power Learn Project - Software Engineering</span></li>
-        <li><span>GirlLead - Data Analytics (Ongoing)</span></li>
-        <li><span>DataCamp - Data Science Certificate (Ongoing)</span></li>
-      <li><span>Cybersecurity and Emerging technologies- Ministry of ICT authority Kenya</span></li>
-       </ul>
-    </section>
-
-    <section id="contributions">
-      <h2><i class="fas fa-hands-helping"></i> Contributions & Activities</h2>
-      <ul class="fancy-list">
-        <li><span>Cereal Growers Association (CGA) - Farmers Education</span></li>
-        <li><span>JavaScript Overnight Event at Egerton University</span></li>
-        <li><span>Web Hackathon - Powerlearn Project</span></li>
-        <li><span>Data Science Training - Kabarak University</span></li>
-        <li><span>UN Hackathon on Drug and Substance Abuse</span></li>
-        <li><span>Safaricom Decode Event</span></li>
-        
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+    </div>
+  </header>
+
+  <div class="main-container">
+
+    <section id="about" class="hero reveal">
+      <div class="hero-content">
+        <h2>Hi, my name is</h2>
+        <h1>Dennis Kipkoech.</h1>
+        <p>I am a <strong>Computer Scientist & Developer</strong> based in Nakuru, Kenya. I build accessible, pixel-perfect web experiences and intelligent AI models tailored to local needs.</p>
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+      </div>
     </section>
 
-    <section id="experience">
-      <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+    <section id="experience" class="reveal">
+      <div class="section-header">
+        <span>01.</span>
+        <h2>Work Experience</h2>
+        <div class="line"></div>
+      </div>
+
       <div class="timeline">
         <div class="timeline-item">
-          <h3>Network Associate Engineer</h3>
-          <p class="institution">Ryantel Network Systems (Volunteer)</p>
-          <p class="date">August - October 2022</p>
-          <p class="description">Worked on connecting WiFi networks at Kenya Medical and Training College (KMTC) - Nakuru Branch</p>
+          <h3>African AI Network (Remote)</h3>
+          <p class="role">Community Manager & Junior Instructor</p>
+          <p class="date">Oct 2025 – Present</p>
+          <p>Coordinating Artificial Intelligence learning and managing community operations.</p>
         </div>
-         <div class="timeline-item">
-          <h3> Brand Ambassador </h3>
-          <p class="institution">Intmax Blockchain Protocol</p>
-          <p class="date">April - August 2025</p>
-          <p class="description">Promoted new product launched by crafting clear, compelling messaging to drive interest and adoption. Invited more members to the community and grew the community buy 40% on their social platforms.</p>
+
+        <div class="timeline-item">
+          <h3>Intmax Blockchain Protocol (Remote)</h3>
+          <p class="role">Brand Ambassador & Community Manager</p>
+          <p class="date">Apr 2025 – Aug 2025</p>
+          <p>Promoted new product launches. Grew the community by 40% on social platforms through compelling messaging.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Kabarak University (School of Medicine)</h3>
+          <p class="role">Technical Clerk</p>
+          <p class="date">May 2025 – July 2025</p>
+          <p>Assisted with administrative tasks, document organization, and technical logistics for lecturer offices.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Ryantel Systems</h3>
+          <p class="role">Network Associate Engineer (Volunteer)</p>
+          <p class="date">Aug 2022 – Oct 2022</p>
+          <p>Connected WiFi networks at Kenya Medical and Training College (KMTC) - Nakuru Branch.</p>
         </div>
       </div>
     </section>
 
-    <section id="interests">
-      <h2><i class="fas fa-heart"></i> Interests</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <div class="skill-tags">
-            <span class="skill-tag">Exploring New Technologies</span>
-            <span class="skill-tag">Continuous Learning</span>
-            <span class="skill-tag">Swimming</span>
-            <span class="skill-tag">Cogitation</span>
-            <span class="skill-tag">Data Science</span>
-            <span class="skill-tag">Web Development</span>
+    <section id="education" class="reveal">
+      <div class="section-header">
+        <span>02.</span>
+        <h2>Education</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Kabarak University</h3>
+          <p class="role"><i class="fas fa-graduation-cap"></i> BSc. Computer Science</p>
+          <p class="date">Sept 2022 – Present</p>
+          <p><strong>Key Courses:</strong> OOP (C, JAVA, C++), Algorithms, OS, Data Structures, Web Dev, SQL (MySQL, Oracle), AI.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Cardinal Otunga High School</h3>
+          <p class="role"><i class="fas fa-school"></i> Secondary Education</p>
+          <p class="date">2018 – 2021</p>
+          <p>Final Grade: B+</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="section-header">
+        <span>03.</span>
+        <h2>Selected Projects</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="card-top gradient-2"></div>
+          <div class="card-bottom">
+            <h3>Scrapper101</h3>
+            <p>AI Market Intelligence Platform</p>
+            <button class="toggle-btn" onclick="toggleDetails('scrapper')">View Details <i class="fas fa-chevron-down"></i></button>
+            <div id="scrapper" class="project-details">
+              <p>Tracks real-time commodity prices across retailers (Naivas, Jumia) using Google Gemini AI to parse e-commerce sites.</p>
+              <a href="https://github.com/Farahou110/scraper101.git" target="_blank" class="project-link-btn">
+                <i class="fab fa-github git-animated"></i> View Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-top gradient-1"></div>
+          <div class="card-bottom">
+            <h3 class="text-highlight">Visitor-log</h3>
+            <p>Digital Entry Management System</p>
+            <button class="toggle-btn" onclick="toggleDetails('visitor')">View Details <i class="fas fa-chevron-down"></i></button>
+            <div id="visitor" class="project-details">
+              <p>Secure, paperless entry system. Handles visitor pre-registration, host approvals, and secure check-ins using unique email codes.</p>
+              <a href="https://github.com/Farahou110/visitor-log.git" target="_blank" class="project-link-btn">
+                <i class="fab fa-github git-animated"></i> View Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-top gradient-3"></div>
+          <div class="card-bottom">
+            <h3>Nexus-Intmax</h3>
+            <p>Blockchain Community Platform</p>
+            <button class="toggle-btn" onclick="toggleDetails('nexus')">View Details <i class="fas fa-chevron-down"></i></button>
+            <div id="nexus" class="project-details">
+              <p>Community management platform for the Intmax ecosystem. Automates social engagement tracking and provides real-time analytics.</p>
+              <a href="https://github.com/Farahou110/nexus-intmax.git" target="_blank" class="project-link-btn">
+                <i class="fab fa-github git-animated"></i> View Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-top gradient-2"></div>
+          <div class="card-bottom">
+            <h3>KenyaNLP</h3>
+            <p>Local Language AI Models</p>
+            <button class="toggle-btn" onclick="toggleDetails('nlp')">View Details <i class="fas fa-chevron-down"></i></button>
+            <div id="nlp" class="project-details">
+              <p>Research initiative for local Kenyan languages. Focuses on data curation and training ML models for low-resource languages.</p>
+              <a href="#" class="project-link-btn">
+                <i class="fas fa-robot"></i> View Research
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> <a href="mailto:dkipkoech@kabarak.ac.ke">dkipkoech@kabarak.ac.ke</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+254797300092">(+254) 0797 300092</a></p>
-        <p><i class="fab fa-x-twitter"></i> <a href="https://x.com/farahou110" target="_blank">x.com/farahou110</a></p>
-        <p><i class="fab fa-github"></i> <a href="https://github.com/chickens110" target="_blank">github.com/chickens110</a></p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dennis-kipkoech-a04a71256" target="_blank">linkedin.com/in/dennis-kipkoech</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> Nakuru, Kenya</p>
+    <section id="certifications" class="reveal">
+      <div class="section-header">
+        <span>04.</span>
+        <h2>Certifications</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h4>Foundational Skills for Professionals</h4>
+          <p class="issuer">ALX Program</p>
+          <p class="date">Aug 2024</p>
+        </div>
+        
+        <div class="cert-card">
+          <h4>JavaScript Hackathon (1st Runners Up)</h4>
+          <p class="issuer">Egerton Google Developers Club</p>
+          <p class="date">March 2025</p>
+        </div>
+        
+        <div class="cert-card">
+          <h4>Software Engineering</h4>
+          <p class="issuer">Power Learn Project</p>
+          <p class="date">Dec 2024</p>
+        </div>
+
+        <div class="cert-card">
+          <h4>Cybersecurity & Emerging Tech</h4>
+          <p class="issuer">ICT Authority of Kenya</p>
+          <p class="date">Sept 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <h4>Data Science Certificate</h4>
+          <p class="issuer">DataCamp</p>
+          <p class="date">Ongoing</p>
+        </div>
       </div>
     </section>
-  </main>
+
+    <section id="skills" class="reveal">
+      <div class="section-header">
+        <span>05.</span>
+        <h2>Skills & Tech</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">C++</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Frameworks/Libs</h4>
+          <div class="skill-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">Django</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">React.js</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">NumPy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="section-header">
+        <span>06.</span>
+        <h2>Get In Touch</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:dennisscorps110@gmail.com" class="contact-card">
+          <i class="far fa-envelope git-animated"></i>
+          <span>dennisscorps110@gmail.com</span>
+        </a>
+        <a href="https://github.com/farahou110" target="_blank" class="contact-card">
+          <i class="fab fa-github git-animated"></i>
+          <span>farahou110</span>
+        </a>
+        <a href="https://www.linkedin.com/in/dennis-kipkoech-a04a71256" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin-in git-animated"></i>
+          <span>Dennis Kipkoech</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
 
   <footer>
-    <p>&copy; 2025 Dennis Kipkoech. All rights reserved.</p>
-  <button class="theme-toggle" id="themeToggle">
-    <i class="fas fa-moon"></i>
-  </button>
+    <p>&copy; 2025 Dennis Kipkoech. Built with code.</p>
+  </footer>
 
   <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const icon = themeToggle.querySelector('i');
-    
-    // Check for saved theme preference or use preferred color scheme
-    const currentTheme = localStorage.getItem('theme') || 
-                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    // Apply the current theme
-    if (currentTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      icon.classList.replace('fa-moon', 'fa-sun');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-    
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', () => {
-      if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        icon.classList.replace('fa-sun', 'fa-moon');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        icon.classList.replace('fa-moon', 'fa-sun');
+    // Navigation Toggle
+    const burger = document.getElementById('burger-icon');
+    const nav = document.getElementById('nav-list');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('show');
+      });
+    });
+
+    // Project Dropdown Logic
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      const isVisible = element.classList.contains('active');
+      
+      // Reset all buttons
+      document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.innerHTML = 'View Details <i class="fas fa-chevron-down"></i>';
+      });
+      document.querySelectorAll('.project-details').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      if (!isVisible) {
+        element.classList.add('active');
+        const btn = element.previousElementSibling;
+        btn.innerHTML = 'Close Details <i class="fas fa-chevron-up"></i>';
       }
-    });
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-        
-        // Update active class
-        document.querySelectorAll('nav a').forEach(link => {
-          link.classList.remove('active');
-        });
-        this.classList.add('active');
-      });
-    });
-    
-    // Update active link on scroll
-    window.addEventListener('scroll', function() {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('nav a');
-      
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
+    }
   </script>
 </body>
 </html>
