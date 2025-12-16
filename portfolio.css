@@ -7,10 +7,10 @@
   --text-main: #F1F5F9;
   --text-muted: #94A3B8;
   --border: #1E293B;
-  --card-radius: 20px;
+  --card-radius: 16px;
 }
 
-/* RESET & BASIC SETUP */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +26,6 @@ body {
 }
 
 /* --- ANIMATIONS --- */
-/* Fade In Up Animation for Sections */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -36,17 +35,20 @@ body {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Git/GitHub Icon Pulse Animation */
+/* Git/GitHub Icon Pulse */
 @keyframes pulse-blue {
   0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
   70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
   100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
 }
 
+.git-animated {
+  border-radius: 50%;
+}
 .git-animated:hover {
   animation: pulse-blue 1.5s infinite;
   color: var(--secondary);
-  transform: scale(1.1);
+  background: rgba(56, 189, 248, 0.1);
 }
 
 /* --- NAVIGATION --- */
@@ -141,7 +143,7 @@ header {
   padding: 0 20px 80px;
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO --- */
 .hero {
   text-align: center;
   padding: 80px 0 120px;
@@ -178,7 +180,7 @@ header {
   box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
-/* --- SECTION HEADERS --- */
+/* --- HEADERS --- */
 .section-header {
   display: flex;
   align-items: center;
@@ -195,17 +197,15 @@ header {
 .section-header h2 {
   font-size: 2rem;
   color: var(--text-main);
-  white-space: nowrap;
 }
 
 .section-header .line {
   height: 1px;
   background: var(--border);
-  width: 100%;
-  max-width: 300px;
+  flex-grow: 1;
 }
 
-/* --- TIMELINES (Experience & Education) --- */
+/* --- EXPERIENCE TIMELINE --- */
 .timeline {
   border-left: 2px solid var(--border);
   margin-left: 10px;
@@ -217,7 +217,6 @@ header {
   position: relative;
 }
 
-/* School/Work Icon Indicator */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -228,12 +227,6 @@ header {
   background: var(--primary);
   border-radius: 50%;
   box-shadow: 0 0 0 5px var(--bg-dark);
-  transition: background 0.3s;
-}
-
-.timeline-item:hover::before {
-  background: var(--secondary);
-  box-shadow: 0 0 0 5px var(--bg-card);
 }
 
 .timeline-item h3 {
@@ -255,63 +248,65 @@ header {
   margin-bottom: 10px;
 }
 
-/* --- CERTIFICATES GRID (New Styling) --- */
-.cert-grid {
+/* --- EDUCATION (BOXED) --- */
+.education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
-.cert-card {
+.education-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: var(--card-radius);
   padding: 25px;
-  border-radius: 15px;
-  position: relative;
   transition: transform 0.3s, border-color 0.3s;
+  position: relative;
   overflow: hidden;
 }
 
-.cert-card:hover {
+.education-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
 }
 
-.cert-card::after {
-  content: '\f0a3'; /* FontAwesome Certificate Icon */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+/* Gradient Top Bar for "Box Image" feel */
+.education-card::before {
+  content: '';
   position: absolute;
-  top: -20px;
-  right: -20px;
-  font-size: 5rem;
-  color: rgba(255, 255, 255, 0.03);
-  transform: rotate(20deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
-.cert-card h4 {
+.education-card h3 {
   color: var(--text-main);
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.cert-card .issuer {
-  color: var(--primary);
-  font-size: 0.9rem;
   margin-bottom: 5px;
+  font-size: 1.2rem;
 }
 
-.cert-card .date {
+.education-card .degree {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.education-card .courses {
+  font-size: 0.9rem;
   color: var(--text-muted);
-  font-size: 0.8rem;
-  font-style: italic;
+  margin-top: 10px;
+  line-height: 1.5;
 }
 
-/* --- PROJECTS --- */
+/* --- PROJECTS (CARDS) --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  margin-bottom: 50px;
 }
 
 .project-card {
@@ -332,14 +327,13 @@ header {
 }
 
 .card-top {
-  height: 200px;
+  height: 180px;
   width: 100%;
-  position: relative;
 }
 
-.gradient-1 { background: linear-gradient(135deg, #1e293b 0%, #38bdf8 100%); }
-.gradient-2 { background: linear-gradient(135deg, #0f172a 0%, #0ea5e9 100%); }
-.gradient-3 { background: linear-gradient(135deg, #134e4a 0%, #22d3ee 100%); }
+.gradient-1 { background: linear-gradient(135deg, #0f172a 0%, #38bdf8 100%); }
+.gradient-2 { background: linear-gradient(135deg, #1e293b 0%, #0ea5e9 100%); }
+.gradient-3 { background: linear-gradient(135deg, #111827 0%, #22d3ee 100%); }
 
 .card-bottom {
   padding: 20px;
@@ -353,8 +347,6 @@ header {
   margin-bottom: 5px;
   color: var(--text-main);
 }
-
-.text-highlight { color: var(--primary); }
 
 .project-details {
   display: none;
@@ -376,7 +368,7 @@ header {
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.85rem;
-  margin-top: auto; /* Push to bottom before expansion */
+  margin-top: auto;
   align-self: flex-start;
   transition: all 0.3s;
 }
@@ -397,7 +389,99 @@ header {
   font-size: 0.9rem;
 }
 
-.project-link-btn:hover { text-decoration: underline; }
+/* --- ENGAGEMENTS (LIST) --- */
+.engagement-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+}
+
+.engagement-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.engagement-item:hover {
+  border-color: var(--secondary);
+  background: rgba(34, 211, 238, 0.05);
+  transform: translateX(5px);
+}
+
+.engagement-content h4 {
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.engagement-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.engagement-date {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-family: monospace;
+  text-align: right;
+  min-width: 80px;
+}
+
+/* --- CERTIFICATES (BOXED) --- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: var(--card-radius);
+  position: relative;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.cert-card h4 {
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.cert-card .issuer {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.cert-card .date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 5px;
+  display: block;
+}
 
 /* --- SKILLS --- */
 .skills-grid {
@@ -431,7 +515,7 @@ header {
 
 .tag:hover {
   border-color: var(--primary);
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 /* --- CONTACT --- */
